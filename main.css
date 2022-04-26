@@ -1,30 +1,50 @@
-a {
-    display: inline-block;
-    width: 50px;
-    text-decoration: none;
-  }
-  nav, scroll-container {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-  nav {
-    width: 339px;
-    padding: 5px;
-    border: 1px solid black;
-  }
-  scroll-container {
-    display: block;
-    width: 350px;
-    height: 200px;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-  }
-  scroll-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 5em;
-  }
-  
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  /* font-family: 'Ma Shan Zheng', cursive; */
+}
+html{
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+}
+html body{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#f8c6c6;
+}
+body a{
+  text-decoration: none;
+  color: #E799B0;
+}
+body a:hover{
+  color: #1e0b0b;
+}
+.box{
+  width:500px;
+  margin: 0 0 50px 0;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+}
+/* Scrollbar Effects */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgrey;
+} 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Demo</title>
+
+  <!-- MAIN CSS and Page Icon -->
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="shortcut icon" href="../img/mainIcon.png" />
+
+  <!-- Box Icons -->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  </br>
+  </br>
+  <nav id="navheader">
+    <div id="btnhome" onclick="chooseHome()" class="active"> <i class='bx bx-home'></i> Home </div>
+    <div id="btnquiz" onclick="choosePage1()"> <i class='bx bx-pencil'></i> Quiz </div>
+    <div id="btntime" onclick="chooseTime()"> <i class='bx bx-calendar-alt'></i> Timeline </div>
+  </nav>
+
+
+  </br>
+  <div id="lock-page">
+    <h1>Passward: 123<i class='bx bxs-lock-alt'></i></h1>
+    <div id="content">
+      <input id="password-input" type="password" placeholder="Password">
+      <i id='eyes' class='bx bx-show' onclick="eyetoggle()"></i>
+    </div>
+    <button onclick="unlock()"><i class='bx bx-key'></i></button>
+  </div>
+
+  <div id="home">
+    <h1 id="day"></h1>
+    </br></br>
+
+    <h3 id="quote"></h3>
+    <h3><span id="name"></span></h3>
+    </br></br>
+
+    <button onclick="nextQuote()"><i class='bx bx-refresh'></i></button>
+  </div>
+
+  <div id="page1">
+    <h1>1. 今天的日期?</h1>
+    <div id="content">
+      <input id="page1-input" placeholder="MM/DD/YYYY" autocomplete="off">
+    </div>
+    <button onclick="unlock1()"><i class='bx bx-key'></i></button>
+  </div>
+
+  <div id="page2">
+    <h1>2. 有个M logo的快餐店是?</h1>
+    <div id="content">
+      <input id="page2-input" placeholder="Restaurant" autocomplete="off">
+    </div>
+    <button onclick="unlock2()"><i class='bx bx-key'></i></button>
+  </div>
+
+  <div id="page3">
+    <h1>3. 2 x 2 - 1等于?</h1>
+    <div id="mc-content">
+      <div><label><input type="radio" name="page3-radio" value="0" /> 1 </label></div>
+      <div><label><input type="radio" name="page3-radio" value="0" /> 2 </label></div>
+      <div><label><input type="radio" name="page3-radio" value="1" /> 3 </label></div>
+      <div><label><input type="radio" name="page3-radio" value="0" /> 4 </label></div>
+    </div>
+    <button onclick="unlock3()"><i class='bx bx-key'></i></button>
+  </div>
+
+  <div id="page4">
+    <h1>4. 选择正确答案 </h1>
+    <div id="mc-content">
+      <div><label><input type="checkbox" id="page4-check1" value="0" /> 我是对的 </label></div>
+      <div><label><input type="checkbox" id="page4-check2" value="0" /> 我上面说的对</label></div>
+      <div><label><input type="checkbox" id="page4-check3" value="1" /> 我下面说的对 </label></div>
+      <div><label><input type="checkbox" id="page4-check4" value="1" /> 我上面说的对</label></div>
+    </div>
+    <button onclick="unlock4()"><i class='bx bx-key'></i></button>
+  </div>
+
+  <div id="page5">
+    <h1>5. 喜欢这个网站吗? </h1>
+    <div id="content">
+      <input id="page5-input" placeholder="Yes" autocomplete="off">
+    </div>
+    <button onclick="unlock5()"><i class='bx bx-key'></i></button>
+  </div>
+
+
+  <div id="time">
+    <div id="timeline">
+
+      <div class="job">
+        <div class="date"><span style="border: 5px solid #FF9D87"></span>01/01/2022</div>
+        <div class="job_description" style="border-left: 5px solid #FF9D87">
+          <h1> January &nbsp;<i class='bx bxs-plus-circle'
+              onclick="toggle1('container1', 'container2', 'container3')"></i></h1>
+
+          <div id="time-box">
+            <div class="container" id="container1">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container2">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container3">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="date"><span style="border: 5px solid #71c5df"></span>02/01/2022</div>
+        <div class="job_description" style="border-left: 5px solid #71C5DF;">
+          <h1> February &nbsp;<i class='bx bxs-plus-circle'
+              onclick="toggle1('container4', 'container5', 'container6')"></i></h1>
+
+          <div id="time-box">
+            <div class="container" id="container4">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container5">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container6">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="date"><span style=" border: 5px solid #84C6A2"></span>03/01/2022</div>
+        <div class="job_description" style="border-left: 5px solid #84c6a2">
+          <h1> March &nbsp;<i class='bx bxs-plus-circle'
+              onclick="toggle1('container7', 'container8', 'container9')"></i></h1>
+
+          <div id="time-box">
+            <div class="container" id="container7">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container8">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container9">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="job">
+        <div class="date"><span style="border: 5px solid #FF9D87"></span>04/01/2022</div>
+        <div class="job_description" style="border-left: 5px solid #FF9D87">
+
+          <h1> April &nbsp;<i class='bx bxs-plus-circle'
+              onclick="toggle1('container10', 'container11', 'container12')"></i></h1>
+          <div id="time-box">
+            <div class="container" id="container10">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container11">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+            <div class="container" id="container12">
+              <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+              <div id="overlay">
+                <p>
+                  阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                  静谧。水天相接，烟岚中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="date"><span style="border: 5px solid #71c5df"></span>05/01/202</div>
+        <div class="job_description" style="border-left: 5px solid #71C5DF;">
+
+          <h1> May &nbsp;</h1>
+          <div class="container" id="container40">
+            <img src="https://i.pinimg.com/originals/33/a6/01/33a6010579d62cca90014e0da054141b.png">
+            <div id="overlay">
+              <p>
+                阳光的力度突然变得锐利。江水上涨，丰腴的情感，波光盈盈。黄昏的水面，渔舟以漂浮的轻盈，写意晚唱的序曲……
+
+                静谧。水天相接，烟岚 中，倒映的景色，荡漾着诗意的朦胧。夕阳泼金，千年岩石上，盘坐着静如处子的古塔。归鸦倦了，弹丸般落在沧桑的塔尖……传说的魂灵，驭风而来，柔韧的手指，敲击檐角垂挂的铃铛，于是，诉说悠悠……
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="date"><span style="border: 5px solid  #71c5df"></span></div>
+      </div>
+
+    </div>
+  </div>
+  </br>
+
+  <!-- ======================== MAIN JS ======================== -->
+  <script type="text/javascript" src="./main.js"></script>
+
+  <!-- ======================== JQuery Library ======================== -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+</body>
+
+</html>
